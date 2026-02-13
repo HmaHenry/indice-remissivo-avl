@@ -1,9 +1,9 @@
 # Índice Remissivo com Árvore AVL
 
-Gestão da Informação
+Gestão da Informação  
 Projeto da disciplina de Estruturas de Dados 2 — UFU  
-Alunos: Henrique Melo de Araújo e Murilo Rodrigues de Moura 
-Professora: Maria Adriana Vidigal de Lima
+Alunos: Henrique Melo de Araújo e Murilo Rodrigues de Moura  
+Professora: Maria Adriana Vidigal de Lima  
 
 ---
 
@@ -339,4 +339,5 @@ Total de rotações executadas: 443
 
 - Importância do balanceamento em árvores binárias para garantir eficiência
 - Aplicação prática de recursão em estruturas de dados
+
 - Importância de testes exaustivos em estruturas complexas
