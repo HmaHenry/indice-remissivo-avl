@@ -19,20 +19,16 @@ class No:
 
     def remover_linha(self, linha):
         # Remove uma linha específica da lista
+        # Retorna (encontrou, ficou_vazia)
         if linha in self.linhas:
             self.linhas.remove(linha)
-
-        # Retorna True se a não sobrou nenhuma linha
-        return len(self.linhas) == 0
+            return True, len(self.linhas) == 0
+        return False, False
     
     def __str__(self):
         # Formata a saida do nó como string
         # Ordena a lista com os números das linhas
-        sorted(self.linhas)
         # Transforma todos os elementos em str
-        for i in range(len(self.linhas)):
-            self.linhas[i] = str(self.linhas[i])
-
-        # Formatação: "palavra x, y, z"
-        linhas_str = ','.join(self.linhas)
-        return f"{self.palavra} {linhas_str}"
+        # Formata a saida do nó como string sem modificar a lista original - usando list comprehension
+        linhas_str = ','.join(str(l) for l in sorted(self.linhas)) 
+        return f"{self.palavra} {linhas_str}" # Formatação: "palavra x, y, z"

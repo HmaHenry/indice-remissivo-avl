@@ -307,33 +307,6 @@ class ArvoreAVL:
             return self.__rotacao_RL(no)
         
         return no
-        
-        # Atualiza altura e balanceia
-        self.__atualizar_altura(no)
-        balanceamento = self.__fator_balanceamento(no)
-        
-        # Rebalanceia se necessário
-        # Caso Esquerda-Esquerda
-        if balanceamento > 1 and self.__fator_balanceamento(no.esquerda) >= 0:
-            self.total_rotacoes += 1
-            return self.__rotacao_LL(no)
-        
-        # Caso Esquerda-Direita
-        if balanceamento > 1 and self.__fator_balanceamento(no.esquerda) < 0:
-            self.total_rotacoes += 1
-            return self.__rotacao_LR(no)
-        
-        # Caso Direita-Direita
-        if balanceamento < -1 and self.__fator_balanceamento(no.direita) <= 0:
-            self.total_rotacoes += 1
-            return self.__rotacao_RR(no)
-        
-        # Caso Direita-Esquerda
-        if balanceamento < -1 and self.__fator_balanceamento(no.direita) > 0:
-            self.total_rotacoes += 1
-            return self.__rotacao_RL(no)
-        
-        return no
     
     def __encontrar_minimo(self, no):
         # Encontra o nó com menor valor em uma subárvore
